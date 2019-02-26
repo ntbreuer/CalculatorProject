@@ -3,8 +3,8 @@ package cse360assign2;
 /**
 * This calculator program can perform basic arethmatic operations and records the history of operations
 *
-* version 2
-* 
+* version 3
+*
 * @author  Nic Breuer
 * @date 2/19/19
 *
@@ -12,12 +12,14 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
+	private String H;
 	
 	/**
 	 * Constuctor Method
 	 */
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		H = new String("0");
 	}
 	
 	/**
@@ -35,6 +37,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total += value;
+		H += " + " + value;
 	}
 	
 	/**
@@ -43,6 +46,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total -= value;
+		H += " - " + value;
 	}
 	
 	/**
@@ -51,6 +55,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		H += " * " + value;
 	}
 	
 	/**
@@ -59,6 +64,7 @@ public class Calculator {
 	 */
 	public void divide (int value) {
 		total = (value!=0) ? (total/value) : 0;
+		H += " / " + value;
 	}
 	
 	/**
@@ -66,6 +72,6 @@ public class Calculator {
 	 * @return string
 	 */
 	public String getHistory () {
-		return "";
+		return H;
 	}
 }
