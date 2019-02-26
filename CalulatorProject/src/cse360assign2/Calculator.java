@@ -1,13 +1,14 @@
 package cse360assign2;
 
 /**
-* This calculator program can perform basic arithmetic operations and records the history of operations
+* This calculator program can perform basic arethmatic operations and records the history of operations
+*
+* version 2
 * 
 * @author  Nic Breuer
 * @date 2/19/19
 *
 */
-
 public class Calculator {
 
 	private int total;
@@ -25,15 +26,15 @@ public class Calculator {
 	 * @return calculated total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
-	
+
 	/**
 	 * Performs the add operation
 	 * @param integer
 	 */
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	/**
@@ -41,7 +42,7 @@ public class Calculator {
 	 * @param integer
 	 */
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	/**
@@ -49,7 +50,7 @@ public class Calculator {
 	 * @param integer
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**
@@ -57,7 +58,7 @@ public class Calculator {
 	 * @param integer
 	 */
 	public void divide (int value) {
-		
+		total = (value!=0) ? (total/value) : 0;
 	}
 	
 	/**
